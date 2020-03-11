@@ -2,7 +2,6 @@ backup-linux
 ============
 Script to create a copy files in linux.
 
-
 ### install
 
 Make dir `/backup` and copy there `make.sh`:
@@ -30,8 +29,14 @@ If you want to change some settings like main backup dir open:
 nano /backup/make.sh
 ```
 
+### run manually
 
-### cron
+To create a current copy right now:
+```console
+bash /backup/make.sh
+```
+
+### run automatically (cron)
 
 To run script daily at 1:01 am open `crontab -e` and add line:
 ```
@@ -40,11 +45,23 @@ To run script daily at 1:01 am open `crontab -e` and add line:
 In `/backup/cron.log` you will find all backup history.
 
 
-### output in /backup/backup
+### output in /backup/backup (default)
 
-Backup directories made daily (day of week): 1 2 3 4 5 6 7
+Backup directories made daily (day of week): 
+`/backup/backup/1` for Monday,
+`/backup/backup/2` for Tuesday
+etc.
 
-Backup directories made daily (month): 01 02 03 04 05 06 07 08 09 10 11 12
+Backup directories made daily (month): 
+`/backup/backup/01` for January
+`/backup/backup/02` for February
+etc.
+
+After every backup is created link for lastest dir:
+`/backup/backup/latest`
+
+
+### important 
 
 Existing backup dirs are overwriten by new.
 Script dont delete old backup directories (only overwrites).
