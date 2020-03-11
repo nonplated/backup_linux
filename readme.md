@@ -6,39 +6,39 @@ Script to create a copy files in linux.
 install
 ===
 Make dir "/backup" and copy there "make.sh":
-'''
+"""bash
 mkdir /backup
 cd /backup
 git clone https://github.com/nonplated/backup-linux.git
-'''
+"""
 
 select files to backup
 ===
 create file with paths (default /backup/files.txt):
-'''
+"""
 nano /backup/files.txt
-'''
+"""
 input for example and save:  
-'''
+"""
 /usr/var/www
-'''
+"""
 
 If you want to change dir and filename open:
-'''
+"""
 nano /backup/make.sh
-'''
+"""
 
 
 cron
 ===
 To run script daily at 1:01 am:
-'''
+"""
 crontab -e
-'''
+"""
 add line: 
-'''
+"""
 1 1 * * * * bash /backup/make.sh
-'''
+"""
 
 
 output in /backup/backup
