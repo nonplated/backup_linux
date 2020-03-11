@@ -18,12 +18,14 @@ create file with paths (default `/backup/files.txt`):
 ```console
 nano /backup/files.txt
 ```
-input for example and save:  
+input ABSOLUTE paths to dirs and filenames (be sure that slash is at the and of dir name):
 ```
-/usr/var/www
+/var/www/
+/root/mail.txt
 ```
+Save.
 
-If you want to change dir and filename open:
+If you want to change some settings like main backup dir open:
 ```console
 nano /backup/make.sh
 ```
