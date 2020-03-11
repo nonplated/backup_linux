@@ -5,7 +5,7 @@ Script to create a copy files in linux.
 
 ### install
 
-Make dir "/backup" and copy there "make.sh":
+Make dir `/backup` and copy there `make.sh`:
 ```console
 mkdir /backup
 cd /backup
@@ -14,7 +14,7 @@ git clone https://github.com/nonplated/backup-linux.git
 
 ### select files to backup
 
-create file with paths (default /backup/files.txt):
+create file with paths (default `/backup/files.txt`):
 ```console
 nano /backup/files.txt
 ```
