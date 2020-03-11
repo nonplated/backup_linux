@@ -9,7 +9,7 @@ Make dir `/backup` and copy there `make.sh`:
 ```console
 mkdir /backup
 cd /backup
-git clone https://github.com/nonplated/backup-linux.git
+git clone https://github.com/nonplated/backup_linux.git
 ```
 
 ### select files to backup
@@ -35,7 +35,7 @@ To run script daily at 1:01 am open `crontab -e` and add line:
 ```
 1 1 * * * bash /backup/make.sh >> /backup/cron.log
 ```
-In `cron.log` you will find all backup history.
+In `/backup/cron.log` you will find all backup history.
 
 
 ### output in /backup/backup
