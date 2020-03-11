@@ -31,14 +31,11 @@ nano /backup/make.sh
 
 ### cron
 
-To run script daily at 1:01 am:
-```console
-crontab -e
+To run script daily at 1:01 am open `crontab -e` and add line:
 ```
-add line: 
+1 1 * * * bash /backup/make.sh >> /backup/cron.log
 ```
-1 1 * * * * bash /backup/make.sh
-```
+In `cron.log` you will find all backup history.
 
 
 ### output in /backup/backup
